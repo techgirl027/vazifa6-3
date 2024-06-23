@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-color: rgb(123, 115, 242);
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      .menubar {
+        background-color: rgb(87, 75, 247);
+        text-align: center;
+      }
+
+      .menubar ul {
+        display: inline-flex;
+        list-style: none;
+        color: #fff;
+      }
+
+      .menubar ul li {
+        width: 120px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menubar ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .active,
+      .menubar ul li:hover {
+        color: rgb(179, 174, 249);
+        border-radius: 3px;
+      }
+
+      .sub-menu-1 {
+        display: none;
+      }
+
+      .menubar ul li:hover .sub-menu-1 {
+        display: block;
+        position: absolute;
+        background-color: rgb(87, 75, 247);
+        margin-top: 15px;
+        margin-left: -15px;
+      }
+
+      .menubar ul li:hover .sub-menu-1 ul {
+        display: block;
+        margin: 10px;
+      }
+
+      .menubar ul li:hover .sub-menu-1 ul li {
+        width: 150px;
+        padding: 10px;
+        border-bottom: 1px dotted #fff;
+        background-color: transparent;
+        border-radius: 0;
+        text-align: left;
+      }
+
+      .menubar ul li a:hover .sub-menu-1 ul li:last-child {
+        border-bottom: none;
+      }
+
+      .menubar ul li a:hover .sub-menu-1 ul li a :hover {
+        color: #c27777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menubar">
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li>
+          <a href="#">About us</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="#">Mission</a></li>
+              <li><a href="#">Vision</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">Services</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="#">Web designing </a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Mobile App</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Investors</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Training</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
